@@ -1,2 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Actor");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Actor", sans-serif; }
+
 body {
-  background: #444; }
+  background: #333333; }
+
+.text-accent {
+  color: #a72a45; }
+
+.header-flex {
+  display: flex;
+  align-items: baseline; }
+
+header {
+  border-bottom: 1px solid red;
+  width: 100%;
+  height: 10vh;
+  padding: 1rem;
+  background-color: #2e2e2e; }
+  header h1 {
+    flex: 2;
+    border: 1px solid green; }
+  header nav {
+    flex: 2;
+    border: 1px solid green; }
+    header nav ul {
+      list-style-type: none;
+      justify-content: space-around;
+      padding: 0 5rem; }
+      header nav ul li {
+        font-size: 18pt;
+        border: 1px solid cyan; }
+        header nav ul li a {
+          text-decoration: none; }
+  header div {
+    border: 1px solid green;
+    flex: 1; }

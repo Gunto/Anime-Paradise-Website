@@ -1,5 +1,63 @@
-$primary-colour: #444;
+@import url("https://fonts.googleapis.com/css?family=Actor");
+
+$primary-colour: hsl(0, 0%, 20%);
+$accent-colour: #a72a45;
+
+// Ensures margin and padding are accounted for in width and height of all elements
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Actor", sans-serif;
+}
 
 body {
-    background: $primary-colour;
+  background: $primary-colour;
+}
+
+.text-accent {
+  color: $accent-colour;
+}
+
+.header-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+header {
+  border-bottom: 1px solid red;
+  width: 100%;
+  height: 10vh;
+  padding: 1rem;
+  background-color: darken($primary-colour, 2);
+
+  h1 {
+    flex: 2;
+    border: 1px solid green;
+  }
+
+  nav {
+    flex: 2;
+    border: 1px solid green;
+
+    ul {
+      list-style-type: none;
+      justify-content: space-around;
+      padding: 0 5rem;
+
+      li {
+        font-size: 18pt;
+        border: 1px solid cyan;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  div {
+    border: 1px solid green;
+    flex: 1;
+  }
 }
