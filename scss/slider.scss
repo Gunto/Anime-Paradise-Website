@@ -1,0 +1,77 @@
+$nav-colour: rgba(255, 255, 255, 0.5);
+$nav-hover: rgba(255, 255, 255, 0.8);
+$nav-size: 50px;
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  width: 100%;
+  height: auto;
+  list-style: none;
+  overflow: hidden;
+}
+.slider li {
+  float: left;
+}
+.slider li img {
+  width: 100%;
+  display: block;
+}
+
+/* Navigation */
+.slider-buttons {
+  position: absolute;
+  width: $nav-size;
+  height: $nav-size;
+  top: 50%;
+  margin-top: calc(#{$nav-size} / 2 * -1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-buttons i {
+  color: $nav-colour;
+  margin: auto;
+  font-size: 3rem;
+
+  &:hover {
+    color: $nav-hover;
+  }
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+/* Dots */
+.pagination-container {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot:not(:last-of-type) {
+  margin-right: 8px;
+}
+.dot:hover {
+  background: #d9d9d9;
+}
+.dot.active {
+  background: #333;
+  cursor: initial;
+}
