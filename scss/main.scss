@@ -50,6 +50,10 @@ header {
           &:visited {
             color: $accent-colour;
           }
+
+          &:hover {
+            color: lighten($accent-colour, 10%);
+          }
         }
       }
     }
@@ -220,7 +224,7 @@ main {
   }
 
   span {
-    color: darken($primary-text-colour, 20%);
+    color: $secondary-text-colour;
     font-size: 14pt;
   }
 }
@@ -230,4 +234,48 @@ footer {
   margin-top: 3rem;
   padding: 1rem;
   height: 10vh;
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    // border: 1px solid red;
+    align-self: center;
+
+    span {
+      color: $secondary-text-colour;
+      font-size: 12pt;
+    }
+  }
+}
+
+.follow {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+  span {
+    margin-right: 0.5rem;
+  }
+
+  a {
+    background-color: $accent-colour;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    margin: 0.4rem;
+    text-align: center;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    i {
+      color: $primary-text-colour;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      background-color: lighten($accent-colour, 10%);
+    }
+  }
 }
